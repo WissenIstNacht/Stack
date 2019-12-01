@@ -42,7 +42,7 @@ int peek(pStack s){
     return s->top->key;
 }
 
-void clear(pStack s){
+void clear_stack(pStack s){
     pElem curr_elem = s->top;
     pElem prev_elem = s->top;
     
@@ -59,7 +59,7 @@ void remove_stack(pStack s){
     free(s);
 }
 
-int* toArray(pStack s){
+int* stack2Array(pStack s){
     int n = s->size;
     if (n == 0)   return NULL;
 
@@ -73,7 +73,7 @@ int* toArray(pStack s){
     return new_arr;
 }
 
-char* toString(pStack s){
+char* stack2String(pStack s){
     int n = s->size;
 
     if(n == 0){
@@ -99,7 +99,7 @@ char* toString(pStack s){
     return buffer;
 }
 
-void print(pStack s){
+void print_stack(pStack s){
     if(s->size == 0){
         printf("The stack is empty: %s\n", 
             toString(s));

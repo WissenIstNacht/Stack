@@ -113,7 +113,7 @@ int peek(pStack s);
  * This method iterates through the stack, deleting each element. It frees the
  * memory of the allocated elements and sets the top pointer NULL.
  */
-void clear(pStack s);
+void clear_stack(pStack s);
 
 /** Outputs the stack as an array.
  *
@@ -134,7 +134,7 @@ void clear(pStack s);
  * The stack must not be empty, as this makes the program throw an empty stack
  * exception.
  */
-int* toArray(pStack s);
+int* stack2Array(pStack s);
 
 /** Returns a string representation of the stack.
  *
@@ -151,7 +151,7 @@ int* toArray(pStack s);
  *
  *  "||->[e_1]->[e_2]->... ->[TOP]"
  */
-char* toString(pStack s);
+char* stack2String(pStack s);
 
 /** Prints the stack.
  *
@@ -162,6 +162,6 @@ char* toString(pStack s);
  * Convenience function that prints the string returned by the toString
  * function.
  */
-void print(pStack s);
+void print_stack(pStack s);
 
 #endif
